@@ -100,14 +100,26 @@ const carros = [
 
   console.log(sumValueOfCars(carros))
 
-  function filterOfBrand (carros, searchBrand) {
-    const filteredCars = []
-    for(i = 0; i < carros.length; i++) {
-       if(carros[i].marca == searchBrand) {
-       filteredCars.push(carros[i])
-       }
-    }
-    return filteredCars
-  }
+  //function filterOfBrand (carros, searchBrand) {
+  //  const filteredCars = []
+    //for(i = 0; i < carros.length; i++) {
+      // if(carros[i].marca == searchBrand) {
+      // filteredCars.push(carros[i])
+       //}
+   // }
+    //return filteredCars
+  //}
 
-  console.log(filterOfBrand(carros, "VW"))
+  //console.log(filterOfBrand(carros, "VW"))
+
+function searchForAcessory(carros, item) {
+    let acessoryArray = []
+    for (i = 0; i < carros.length; i++) {
+        if (carros[i].acessorios.includes(item)) {
+            acessoryArray.push(carros[i])
+        }
+    }
+    return acessoryArray
+}
+
+console.log(searchForAcessory(carros, "Vidro Elétrico"))
