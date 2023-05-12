@@ -147,8 +147,8 @@ function addVehiclesAtCarsList(carros) {
 console.log(addVehiclesAtCarsList(carros));
 
 function removeVehicles(carros, index) {
-    let attListRemo = 
-   for (i = 0; i < carros.length; i++) {
+    let attListRemo = []
+   for(i = 0; i < carros.length; i++) {
         carros.splice(index)
     }
     return
@@ -172,5 +172,7 @@ function listCar10year(carros) {
 }
 
 console.log(listCar10year(carros))
+
+
 
 
