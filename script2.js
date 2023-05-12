@@ -80,37 +80,37 @@ const carros = [
         acessorios: [],
         preco: 17251.36
     }
-  ]
+]
 
-  function theCars (carList) {
-    for(i = 0; i < carList.length; i++) {
+function theCars(carList) {
+    for (i = 0; i < carList.length; i++) {
         return carList.length
     }
-  }
+}
 
-  console.log(theCars(carros))
+console.log(theCars(carros))
 
-  function sumValueOfCars (valueCars) {
+function sumValueOfCars(valueCars) {
     let sum = 0
-    for(i = 0; i < valueCars.length; i++) {
-         sum += valueCars[i].preco
+    for (i = 0; i < valueCars.length; i++) {
+        sum += valueCars[i].preco
     }
     return sum.toFixed(2)
-  }
+}
 
-  console.log(sumValueOfCars(carros))
+console.log(sumValueOfCars(carros))
 
-  //function filterOfBrand (carros, searchBrand) {
-  //  const filteredCars = []
-    //for(i = 0; i < carros.length; i++) {
-      // if(carros[i].marca == searchBrand) {
-      // filteredCars.push(carros[i])
-       //}
-   // }
-    //return filteredCars
-  //}
+function filterOfBrand(carros, searchBrand) {
+    const filteredCars = []
+    for (i = 0; i < carros.length; i++) {
+        if (carros[i].marca == searchBrand) {
+            filteredCars.push(carros[i])
+        }
+    }
+    return filteredCars
+}
 
-  //console.log(filterOfBrand(carros, "VW"))
+console.log(filterOfBrand(carros, "VW"))
 
 function searchForAcessory(carros, item) {
     let acessoryArray = []
@@ -123,3 +123,54 @@ function searchForAcessory(carros, item) {
 }
 
 console.log(searchForAcessory(carros, "Vidro Elétrico"))
+
+
+
+function addVehiclesAtCarsList(carros) {
+    let listAttCarsList = [];
+    let newVehicle = {
+        modelo: "911",
+        marca: "Porsche",
+        ano: "2020",
+        cor: "Preto",
+        completo: true,
+        acessorios: ['Alarme', 'Trava', 'Ar', 'Vidro Elétrico'],
+        preco: 17251.36
+    };
+    for (let i = 0; i < carros.length; i++) {
+        listAttCarsList.push(carros[i]);
+    }
+    listAttCarsList.push(newVehicle);
+    return listAttCarsList;
+}
+
+console.log(addVehiclesAtCarsList(carros));
+
+function removeVehicles(carros, index) {
+    let attListRemo = 
+   for (i = 0; i < carros.length; i++) {
+        carros.splice(index)
+    }
+    return
+}
+
+console.log(removeVehicles(carros, 5))
+
+console.log(carros)
+
+
+function listCar10year(carros) {
+    let listCars10year = []
+    let carYear = 2022
+    let carsYears = carYear - 10
+    for (let i = 0; i < carros.length; i++) {
+        if (carros[i].ano >= carsYears) {
+            listCars10year.push(carros[i])
+        }
+    }
+    return listCars10year
+}
+
+console.log(listCar10year(carros))
+
+
