@@ -175,4 +175,29 @@ console.log(listCar10year(carros))
 
 
 
+function owners(carros, index, pessoa) {
+    if(!carros[index].proprietarios) {
+        carros[index].proprietarios = null
+    }
+    carros[index].proprietarios = pessoa
+    return carros
+}
+
+let  novoDono = {
+    nome: 'Douglas',
+    telefone: '12998823532'
+}
+
+let carrosAtualizados = owners(carros, 0, novoDono)
+
+console.log(carrosAtualizados)
+console.log(carrosAtualizados[0].proprietarios)
+
+
+
+
+
+
+
+
 

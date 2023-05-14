@@ -86,3 +86,15 @@ function naoMaisLuxo (carro) {
 }
 
 console.log(naoMaisLuxo(carro))
+
+function naoMaisLuxo2 (carro) {
+    if(carro.estacionado == false) {
+        return `O carro ${carro.placa} não está estacionado`
+    } else if (carro.luxo == false) {
+        return `P carrp ${carro.placa} não possui a classe luxo`
+    } else {
+        return `O carro ${carro.placa} não é mais considerado um carro de luxo`
+    }
+}
+
+console.log(naoMaisLuxo2(carro))
